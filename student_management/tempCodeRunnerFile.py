@@ -19,20 +19,15 @@ def search_student(student_name):
     print("student not found in list")
 
 def remove_student(student_name):
-    for student in student_list:
-        if student.lower()==student_name.lower():
-            student_list.remove(student)
-            save_students()
-            print("student removed successfully")
-        elif student_name =="":
-            print("please enter a student name to remove")
-        else:
-            print("student not found in list")
+    if student_name in student_list:
+        student_list.remove(student_name)
+        save_students()
+        print("student removed successfully")
 
-    
-        
-
-    
+    elif student_name =="":
+        print("please enter a student name to remove")
+    else:
+        print("student not found in list")
     
         
     
@@ -74,8 +69,7 @@ while True:
 
         print("Exiting...")
         break
-    else:
-        print("invalid choice")
+    
     
     
                     
