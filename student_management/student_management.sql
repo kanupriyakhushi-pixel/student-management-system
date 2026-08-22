@@ -147,5 +147,5 @@ inner join marks on marks.student_id=students.student_id
 group by name 
 order by avg(marks) desc limit 1;
 
-
+select * from students;
 
